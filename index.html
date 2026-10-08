@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Rock paper scissors </title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styleindex.css">
 
 </head>
 
@@ -14,28 +14,31 @@
     
     <div id="main"> 
 
-        <head id="header">
+        <header id="header">
 
-            <p class="result"> Round: 0 </p>
+            <p class="result" id="round"> Round: 0 </p>
 
-            <p class="result"> Player: 0   Machine: 0 </p>
+            <p class="result" id="score"> Player: 0     Machine: 0 </p>
 
             <p id="game"> ? VS ? </p>
 
-        </head>
+            <p class="result" id="message">     </p>
+
+        </header>
 
         <main id="choices">
 
-            <button class="choice"> <strong>🪨</strong> Rock </button>
+            <button class="choice" id="🪨"> <strong>🪨</strong> Rock </button>
             
-            <button class="choice"> <strong>📄</strong> Paper </button>
+            <button class="choice" id="📄"> <strong>📄</strong> Paper </button>
 
-            <button class="choice"> <strong>✂️</strong> Scissor </button>
+            <button class="choice" id="✂️"> <strong>✂️</strong> Scissor </button>
 
         </main>
 
     </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
