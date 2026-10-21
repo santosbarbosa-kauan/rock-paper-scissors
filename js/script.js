@@ -10,7 +10,6 @@ const gameElement = document.getElementById("game");
 const choice = document.querySelectorAll(".choice");
 const messageElement = document.getElementById("message");
 const titleElement = document.getElementById("title");
-const playagainElement = document.getElementById("playagain");
 
 function getMachineChoice() {
     const choices = ["🪨", "📄", "✂️"];
@@ -55,6 +54,17 @@ function playRound() {
         messageElement.textContent = "Machine wins this round!";
         round++;
     }
+
+    if (playerScore >= 5) {
+        sessionStorage.setItem("gameResult", "win");
+        window.location.href = "result.html";
+        return;
+    } else if (machineScore >= 5) {
+        sessionStorage.setItem("gameResult", "lose");
+        window.location.href = "result.html";
+        return;
+    }
+
 }
 
 getPlayerChoice();
